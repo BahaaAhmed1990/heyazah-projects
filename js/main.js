@@ -21,9 +21,18 @@ const projectProfileModal = document.querySelector(".project-profile");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const heyazaProjects = document.querySelector("#heyaza-projects");
+const home = document.querySelector("#home");
 
 // console.log(aminitiesLinks);
 let slideIndex = 1;
+
+home.addEventListener("click", function (e) {
+  e.preventDefault();
+  aminities.style.display = "none";
+  image2d.style.display = "none";
+  gallerySubMenu.style.display = "none";
+  gallerySubMenu.classList.remove("active");
+});
 
 [...aminitiesLinks].map((link) => {
   console.log(link.getAttribute("data"));
@@ -50,7 +59,10 @@ window.onload = (event) => {
 landscape.addEventListener("click", function (e) {
   e.preventDefault();
   console.log("land");
+  image2d.style.display = "none";
   aminities.style.display = "block";
+  gallerySubMenu.style.display = "none";
+  gallerySubMenu.classList.remove("active");
 });
 
 closeAminities.addEventListener("click", function (e) {
@@ -62,7 +74,10 @@ closeAminities.addEventListener("click", function (e) {
 surroundings.addEventListener("click", function (e) {
   e.preventDefault();
   console.log("surround");
+  aminities.style.display = "none";
   image2d.style.display = "none";
+  gallerySubMenu.style.display = "none";
+  gallerySubMenu.classList.remove("active");
   frame.src =
     "https://kuula.co/share/51x7m?logo=-1&info=0&fs=0&vr=1&zoom=1&gyro=0&thumbs=1&keys=0";
   // surroundingNav.style.display = "block";
@@ -77,6 +92,7 @@ closeSurrounding.addEventListener("click", function (e) {
 gallery.addEventListener("click", function (e) {
   e.preventDefault();
   image2d.style.display = "none";
+  aminities.style.display = "none";
   if (gallerySubMenu.classList.contains("active")) {
     gallerySubMenu.style.display = "none";
     gallerySubMenu.classList.remove("active");
@@ -126,7 +142,7 @@ nextBtn.addEventListener("click", function (e) {
 projectProfile.addEventListener("click", function (e) {
   e.preventDefault();
   modal.style.display = "block";
-  projectProfileModal.style.display = "block";
+  projectProfileModal.style.display = "flex";
 });
 
 function showSlides(n) {

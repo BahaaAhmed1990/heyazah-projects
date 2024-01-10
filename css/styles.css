@@ -79,6 +79,16 @@ body {
   justify-content: center;
   height: 94%;
 }
+.project-profile {
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+.publuuflip {
+  margin-left: 140px;
+  margin-top: 40px;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
