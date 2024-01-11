@@ -32,6 +32,8 @@ home.addEventListener("click", function (e) {
   image2d.style.display = "none";
   gallerySubMenu.style.display = "none";
   gallerySubMenu.classList.remove("active");
+  frame.src =
+    "https://kuula.co/share/518JR?logo=-1&info=0&fs=0&vr=1&zoom=1&gyro=0&thumbs=1";
 });
 
 [...aminitiesLinks].map((link) => {
@@ -63,6 +65,8 @@ landscape.addEventListener("click", function (e) {
   aminities.style.display = "block";
   gallerySubMenu.style.display = "none";
   gallerySubMenu.classList.remove("active");
+  frame.src =
+    "https://kuula.co/share/518JR?logo=-1&info=0&fs=0&vr=1&zoom=1&gyro=0&thumbs=1";
 });
 
 closeAminities.addEventListener("click", function (e) {
